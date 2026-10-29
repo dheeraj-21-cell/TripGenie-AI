@@ -41,6 +41,8 @@ import { formatLocaleDate, LANGUAGE_OPTIONS } from '../utils/formatters';
 import { getOrCreateGuestId } from '../utils/guestIdentity';
 import { POPULAR_GLOBAL_DESTINATIONS as SUGGESTED_DESTINATIONS } from '../data/popularDestinations';
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+
 const INTEREST_ITEMS = [
   { id: 'culinary', icon: Coffee },
   { id: 'history', icon: Landmark },
@@ -97,7 +99,7 @@ export default function TripPlannerForm({ initialDestination = '', externalDesti
   const fetchSavedTrips = async () => {
     try {
       const guestId = getOrCreateGuestId();
-      const res = await fetch(`http://localhost:8000/api/trips?user_id=${encodeURIComponent(guestId)}`, {
+      const res = await fetch(`${API_BASE_URL}/api/trips?user_id=${encodeURIComponent(guestId)}`, {
         headers: { 'X-User-Id': guestId }
       });
       if (res.ok) {
@@ -118,7 +120,7 @@ export default function TripPlannerForm({ initialDestination = '', externalDesti
     setIsSaving(true);
     try {
       const guestId = getOrCreateGuestId();
-      const res = await fetch('http://localhost:8000/api/trips', {
+      const res = await fetch(`${API_BASE_URL}/api/trips`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -143,7 +145,7 @@ export default function TripPlannerForm({ initialDestination = '', externalDesti
     if (e) e.stopPropagation();
     try {
       const guestId = getOrCreateGuestId();
-      const res = await fetch(`http://localhost:8000/api/trips/${encodeURIComponent(tripId)}?user_id=${encodeURIComponent(guestId)}`, {
+      const res = await fetch(`${API_BASE_URL}/api/trips/${encodeURIComponent(tripId)}?user_id=${encodeURIComponent(guestId)}`, {
         method: 'DELETE',
         headers: { 'X-User-Id': guestId }
       });
@@ -170,7 +172,7 @@ export default function TripPlannerForm({ initialDestination = '', externalDesti
     if (regeneratingDay) return;
     setRegeneratingDay(dayNumber);
     try {
-      const res = await fetch('http://localhost:8000/api/itinerary/regenerate-day', {
+      const res = await fetch(`${API_BASE_URL}/api/itinerary/regenerate-day`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -259,7 +261,7 @@ export default function TripPlannerForm({ initialDestination = '', externalDesti
 
     const timer = setTimeout(async () => {
       try {
-        const res = await fetch(`http://localhost:8000/api/destinations/search?q=${encodeURIComponent(trimmed)}&limit=8`);
+        const res = await fetch(`${API_BASE_URL}/api/destinations/search?q=${encodeURIComponent(trimmed)}&limit=8`);
         if (!res.ok) throw new Error('Search failed');
         const data = await res.json();
         setSuggestions(data.results || []);
@@ -412,7 +414,7 @@ export default function TripPlannerForm({ initialDestination = '', externalDesti
     setGeneratedItinerary(null);
 
     try {
-      const response = await fetch('http://localhost:8000/api/itinerary/generate', {
+      const response = await fetch(`${API_BASE_URL}/api/itinerary/generate`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -430,7 +432,7 @@ export default function TripPlannerForm({ initialDestination = '', externalDesti
       setExpandedDay(1);
     } catch (err) {
       console.error('Error generating itinerary:', err);
-      setGenerationError(err.message || 'Could not connect to FastAPI server at http://localhost:8000');
+      setGenerationError(err.message || `Could not connect to FastAPI server at ${API_BASE_URL}`);
     } finally {
       setIsGenerating(false);
     }
@@ -1029,7 +1031,7 @@ export default function TripPlannerForm({ initialDestination = '', externalDesti
                 <h4 className="font-bold text-sm text-rose-200">Connection Notice</h4>
                 <p className="text-slate-300">{generationError}</p>
                 <p className="text-[11px] text-slate-400">
-                  Ensure the FastAPI backend is running on <code className="bg-rose-500/20 px-1 py-0.5 rounded text-rose-200">http://localhost:8000</code>.
+                  Ensure the FastAPI backend is running on <code className="bg-rose-500/20 px-1 py-0.5 rounded text-rose-200">{API_BASE_URL}</code>.
                 </p>
                 <button
                   type="button"
