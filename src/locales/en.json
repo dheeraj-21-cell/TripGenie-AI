@@ -1,0 +1,161 @@
+{
+  "nav": {
+    "brandTag": "AI",
+    "planItinerary": "Plan Itinerary",
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "signIn": "Sign In",
+    "startPlanning": "Start Planning",
+    "themeLight": "Switch to Light Mode",
+    "themeDark": "Switch to Dark Mode",
+    "language": "Language",
+    "authNotice": "Supabase Authentication will be connected in Step 2!"
+  },
+  "hero": {
+    "badge": "Skill Wallet • Generative AI with Google Cloud",
+    "titlePrefix": "Your Dream Journey,",
+    "titleHighlight": "Intelligently Planned",
+    "titleSuffix": "in Seconds",
+    "subtitle": "Skip hours of research. Enter your destination, dates, budget, and travel style to receive a hyper-personalized, day-by-day travel itinerary.",
+    "groqPill": "High-Speed Groq AI",
+    "unsplashPill": "Unsplash Destination Photos",
+    "supabasePill": "Supabase Cloud Sync",
+    "scrollCta": "Customize your trip below"
+  },
+  "planner": {
+    "cardTitle": "Create Your Custom Itinerary",
+    "cardSubtitle": "Configure your travel preferences for the AI planner",
+    "wizard": {
+      "step1Title": "Destination & Dates",
+      "step2Title": "Travelers & Style",
+      "step3Title": "Review & Generate",
+      "continueBtn": "Continue to Preferences",
+      "continueToReview": "Continue to Review",
+      "backBtn": "Back",
+      "stepOf": "Step {{step}} of 3"
+    },
+    "destinationLabel": "Where do you want to go?",
+    "destinationPlaceholder": "e.g. Kyoto, Japan or Florence, Italy",
+    "popular": "Popular:",
+    "departureLabel": "Departure Date",
+    "returnLabel": "Return Date",
+    "durationNotice": "Planned duration: {{days}} days",
+    "budgetLabel": "Select Budget Level",
+    "budgetOptions": {
+      "budget": {
+        "label": "Backpacker",
+        "desc": "Hostels, public transit, street food & free attractions"
+      },
+      "moderate": {
+        "label": "Moderate",
+        "desc": "Boutique hotels, casual dining, mix of highlights & hidden gems"
+      },
+      "luxury": {
+        "label": "Luxury",
+        "desc": "5-star resorts, private transfers, fine dining & exclusive tours"
+      }
+    },
+    "travelersLabel": "Who is traveling?",
+    "travelerTypes": {
+      "solo": "Solo",
+      "couple": "Couple",
+      "family": "Family",
+      "friends": "Friends Group"
+    },
+    "travelersCount": "Total Travelers:",
+    "interestsLabel": "Interests & Travel Vibe (Select all that apply)",
+    "interests": {
+      "culinary": "Culinary & Street Food",
+      "history": "History & Heritage",
+      "nature": "Nature & Scenic Outdoors",
+      "culture": "Art & Museums",
+      "adventure": "Adventure & Thrills",
+      "relaxation": "Relaxation & Wellness",
+      "shopping": "Shopping & Local Markets"
+    },
+    "paceLabel": "Itinerary Pace",
+    "paceOptions": {
+      "relaxed": {
+        "label": "Relaxed",
+        "desc": "1-2 activities/day"
+      },
+      "balanced": {
+        "label": "Balanced",
+        "desc": "2-3 activities/day"
+      },
+      "packed": {
+        "label": "Fast-Paced",
+        "desc": "Full-day sightseeing"
+      }
+    },
+    "errors": {
+      "destination": "Please enter a destination for your trip.",
+      "dates": "Please select both departure and return dates.",
+      "invalidDates": "Return date must be on or after the departure date."
+    },
+    "submitBtn": "Review & Generate Itinerary Plan",
+    "preview": {
+      "badge": "Frontend Form Validation Passed",
+      "readyTitle": "Ready for Backend AI Generation: {{destination}}",
+      "readyDesc": "The frontend has verified all trip parameters. In the next step, clicking generate will dispatch this payload to our Python FastAPI server (/api/generate) to query Groq LLaMA 3.3 in {{languageName}}.",
+      "duration": "Duration",
+      "days": "{{count}} Days",
+      "dates": "Dates",
+      "budget": "Budget",
+      "travelers": "Travelers",
+      "targetLanguage": "Target Language",
+      "interests": "Selected Interests",
+      "apiNote": "FastAPI + Groq integration pending Step 2.",
+      "modifyBtn": "Modify Parameters"
+    }
+  },
+  "features": {
+    "badge": "Engineered for Modern Travelers",
+    "title": "Why TripGenie AI is Different",
+    "subtitle": "No cookie-cutter travel guides. We combine specialized Generative AI with real-time imagery and cloud storage.",
+    "cards": {
+      "groq": {
+        "tag": "GenAI Inference",
+        "title": "Groq LPU Acceleration",
+        "desc": "Generates detailed, realistic day-by-day itineraries with morning, afternoon, and evening slots in under 2 seconds."
+      },
+      "unsplash": {
+        "tag": "Dynamic Media",
+        "title": "Unsplash Photography",
+        "desc": "Every attraction, historic site, and neighborhood comes alive with curated, royalty-free photography."
+      },
+      "supabase": {
+        "tag": "Cloud Storage",
+        "title": "Supabase PostgreSQL & Auth",
+        "desc": "Save your trips, bookmark hidden gems, and access your custom itineraries from any device securely."
+      },
+      "pace": {
+        "tag": "Smart Logic",
+        "title": "Pace & Budget Optimization",
+        "desc": "Prevents travel burnout with realistic transit times, cost estimations, and balanced sightseeing blocks."
+      }
+    },
+    "workflow": {
+      "badge": "Simple 3-Step Process",
+      "title": "From Blank Canvas to Packed Bags",
+      "step1": {
+        "title": "Input Your Style",
+        "desc": "Pick your dream city, dates, budget level, traveler count, and favorite vibes."
+      },
+      "step2": {
+        "title": "Groq Generates the Blueprint",
+        "desc": "Our Python FastAPI backend builds a tailored prompt and returns structured itinerary data."
+      },
+      "step3": {
+        "title": "Explore & Save",
+        "desc": "Review real photos, inspect timings and budget breakdowns, and sync to your Supabase account."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Personalized Travel Itinerary Planner",
+    "attribution": "Skill Wallet • Generative AI with Google Cloud",
+    "stackLabel": "Stack:",
+    "copyright": "Built step-by-step for the Capstone Portfolio."
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "nav": {
+    "brandTag": "IA",
+    "planItinerary": "Planifier l'itinéraire",
+    "features": "Fonctionnalités",
+    "howItWorks": "Comment ça marche",
+    "signIn": "Se connecter",
+    "startPlanning": "Commencer",
+    "themeLight": "Passer en Mode Clair",
+    "themeDark": "Passer en Mode Sombre",
+    "language": "Langue",
+    "authNotice": "L'authentification Supabase sera connectée à l'Étape 2 !"
+  },
+  "hero": {
+    "badge": "Skill Wallet • IA Générative avec Google Cloud",
+    "titlePrefix": "Le voyage de vos rêves,",
+    "titleHighlight": "Planifié Intelligemment",
+    "titleSuffix": "en Quelques Secondes",
+    "subtitle": "Oubliez les heures de recherche. Indiquez votre destination, vos dates, votre budget et votre style pour recevoir un itinéraire sur mesure au jour le jour.",
+    "groqPill": "Groq IA Ultra-Rapide",
+    "unsplashPill": "Photos de Destination Unsplash",
+    "supabasePill": "Synchronisation Cloud Supabase",
+    "scrollCta": "Personnalisez votre voyage ci-dessous"
+  },
+  "planner": {
+    "cardTitle": "Créez Votre Itinéraire Sur Mesure",
+    "cardSubtitle": "Configurez vos préférences de voyage pour le planificateur IA",
+    "wizard": {
+      "step1Title": "Destination et Dates",
+      "step2Title": "Voyageurs et Style",
+      "step3Title": "Révision et Génération",
+      "continueBtn": "Passer aux Préférences",
+      "continueToReview": "Passer à la Révision",
+      "backBtn": "Retour",
+      "stepOf": "Étape {{step}} sur 3"
+    },
+    "destinationLabel": "Où souhaitez-vous aller ?",
+    "destinationPlaceholder": "ex. Kyoto, Japon ou Florence, Italie",
+    "popular": "Populaire :",
+    "departureLabel": "Date de départ",
+    "returnLabel": "Date de retour",
+    "durationNotice": "Durée prévue : {{days}} jours",
+    "budgetLabel": "Sélectionnez le niveau de budget",
+    "budgetOptions": {
+      "budget": {
+        "label": "Routard / Économique",
+        "desc": "Auberges, transports en commun, street food & visites gratuites"
+      },
+      "moderate": {
+        "label": "Modéré / Équilibré",
+        "desc": "Hôtels de charme, restaurants sympas, incontournables & trésors cachés"
+      },
+      "luxury": {
+        "label": "Luxe / Haut de Gamme",
+        "desc": "Resorts 5 étoiles, transferts privés, haute gastronomie & visites privées"
+      }
+    },
+    "travelersLabel": "Qui voyage ?",
+    "travelerTypes": {
+      "solo": "En Solo",
+      "couple": "En Couple",
+      "family": "En Famille",
+      "friends": "Entre Amis"
+    },
+    "travelersCount": "Nombre de voyageurs :",
+    "interestsLabel": "Centres d'intérêt et ambiance (Sélectionnez tout ce qui s'applique)",
+    "interests": {
+      "culinary": "Gastronomie & Cuisine Locale",
+      "history": "Histoire & Patrimoine",
+      "nature": "Nature & Grands Espaces",
+      "culture": "Art & Musées",
+      "adventure": "Aventure & Randonnée",
+      "relaxation": "Détente & Bien-être",
+      "shopping": "Shopping & Marchés Locaux"
+    },
+    "paceLabel": "Rythme de l'itinéraire",
+    "paceOptions": {
+      "relaxed": {
+        "label": "Tranquille",
+        "desc": "1-2 activités par jour"
+      },
+      "balanced": {
+        "label": "Équilibré",
+        "desc": "2-3 activités par jour"
+      },
+      "packed": {
+        "label": "Intense",
+        "desc": "Journée complète de visites"
+      }
+    },
+    "errors": {
+      "destination": "Veuillez entrer une destination pour votre voyage.",
+      "dates": "Veuillez sélectionner les dates de départ et de retour.",
+      "invalidDates": "La date de retour doit être postérieure ou égale à la date de départ."
+    },
+    "submitBtn": "Vérifier & Générer l'Itinéraire",
+    "preview": {
+      "badge": "Validation du Formulaire Réussie",
+      "readyTitle": "Prêt pour la Génération IA : {{destination}}",
+      "readyDesc": "Le frontend a validé tous les paramètres de votre voyage. À l'étape suivante, cliquer sur générer transmettra ces données au serveur Python FastAPI (/api/generate) pour interroger Groq LLaMA 3.3 en {{languageName}}.",
+      "duration": "Durée",
+      "days": "{{count}} Jours",
+      "dates": "Dates",
+      "budget": "Budget",
+      "travelers": "Voyageurs",
+      "targetLanguage": "Langue Cible",
+      "interests": "Centres d'intérêt sélectionnés",
+      "apiNote": "Intégration FastAPI + Groq en attente de l'Étape 2.",
+      "modifyBtn": "Modifier les paramètres"
+    }
+  },
+  "features": {
+    "badge": "Conçu pour les Voyageurs Modernes",
+    "title": "Pourquoi TripGenie AI est Différent",
+    "subtitle": "Fini les guides génériques. Nous combinons une IA Générative sur mesure avec des photos immersives et un stockage cloud sécurisé.",
+    "cards": {
+      "groq": {
+        "tag": "Inférence GenAI",
+        "title": "Accélération Groq LPU",
+        "desc": "Génère des plannings détaillés matin, après-midi et soir en moins de 2 secondes."
+      },
+      "unsplash": {
+        "tag": "Médias Dynamiques",
+        "title": "Photographie Unsplash",
+        "desc": "Chaque attraction, monument historique et quartier s'anime avec des photos professionnelles."
+      },
+      "supabase": {
+        "tag": "Cloud & Données",
+        "title": "Supabase PostgreSQL & Auth",
+        "desc": "Enregistrez vos voyages, sauvegardez vos favoris et accédez à vos plans depuis n'importe quel appareil."
+      },
+      "pace": {
+        "tag": "Logique Intelligente",
+        "title": "Optimisation du Rythme et du Budget",
+        "desc": "Évite la fatigue avec des temps de trajet réalistes, des estimations de coûts et des journées équilibrées."
+      }
+    },
+    "workflow": {
+      "badge": "Processus Simple en 3 Étapes",
+      "title": "De la Page Blanche aux Valises Bouclées",
+      "step1": {
+        "title": "Définissez Votre Style",
+        "desc": "Choisissez votre ville rêvée, dates, budget, nombre de voyageurs et vos envies."
+      },
+      "step2": {
+        "title": "Groq Conçoit le Plan",
+        "desc": "Notre backend Python FastAPI élabore un prompt sur mesure et renvoie un itinéraire structuré."
+      },
+      "step3": {
+        "title": "Explorez & Enregistrez",
+        "desc": "Consultez les photos réelles, inspectez les horaires et budgets, et synchronisez avec Supabase."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Planificateur d'Itinéraires de Voyage Personnalisés",
+    "attribution": "Skill Wallet • IA Générative avec Google Cloud",
+    "stackLabel": "Technologies :",
+    "copyright": "Développé étape par étape pour le Portfolio Capstone."
+  }
+}
